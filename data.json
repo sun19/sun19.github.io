@@ -1,0 +1,30 @@
+[
+  {
+    "name": "凡人修仙传",
+    "platform": "哔哩哔哩",
+    "day": 6,
+    "airTime": "11: 00",
+    "image": "https://t15.baidu.com/it/u=1179910354,3776744467&fm=58&app=83&size=w931&q=75&n=0&f=JPEG&fmt=auto&maxorilen2heic=2000000"
+  },
+  {
+    "name": "牧神记",
+    "platform": "哔哩哔哩",
+    "day": 0,
+    "airTime": "11: 00",
+    "image": "https://t13.baidu.com/it/u=1675298905,3975415387&fm=58&app=83&size=w931&n=0&f=JPEG&fmt=auto?sec=1741539600&t=8ba5e9d38b16970743471a781501f4aa"
+  },
+  {
+    "name": "仙逆",
+    "platform": "腾讯视频",
+    "day": 0,
+    "airTime": "18: 00",
+    "image": "https://t15.baidu.com/it/u=2555062576,1383698518&fm=58&app=83&size=w931&n=0&f=JPEG&fmt=auto?sec=1741539600&t=a1de6cbaaaacc892ad73b83fe05e6f67"
+  },
+  {
+    "name": "沧元图",
+    "platform": "优酷视频",
+    "day": 5,
+    "airTime": "11: 00",
+    "image": "https://t15.baidu.com/it/u=145019308,776192155&fm=58&app=83&size=w931&q=75&n=0&f=JPEG&fmt=auto&maxorilen2heic=2000000"
+  }
+]

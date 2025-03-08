@@ -13,20 +13,19 @@ body {
 }
 
 header {
+  background-color: #f5f5f5;
   text-align: center;
-  margin-bottom: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 10px;
 }
 
 header h1 {
   color: #4a4a4a;
-  font-size: 2.5rem;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  align-items: center;
+  font-size: 1.5rem;
 }
 
 button {
@@ -46,7 +45,6 @@ button:hover {
 
 /* 标签式导航样式 */
 .tabs-container {
-  margin-bottom: 20px;
   border-bottom: 2px solid #ddd;
 }
 
@@ -80,25 +78,23 @@ button:hover {
 
 /* 内容区域样式 */
 .content-container {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   min-height: 400px;
   max-width: 700px;
   margin: 0 auto;
+  overflow: auto;
+  height: 100%;
+  margin-top: 90px;
 }
 
 .day-content {
   display: block;
 }
 
-.anime-list {
-}
-
 .anime-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
-  background-color: #f9f9f9;
   border-radius: 6px;
   flex-direction: column;
   overflow: hidden;
@@ -107,10 +103,15 @@ button:hover {
   margin-bottom: 20px;
 }
 
+.anime-card:last-child {
+  margin-bottom: 0;
+}
+
 .anime-image {
   width: 100%;
-  height: auto;
+  height: 400px;
   object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 
 .anime-info {
@@ -132,124 +133,11 @@ button:hover {
 }
 
 .anime-platform {
-  font-size: 0.9rem;
   margin-bottom: 5px;
-}
-
-.anime-episode {
-  font-weight: bold;
 }
 
 .anime-platform,
 .anime-air-time {
-  font-weight: bold;
-}
-
-.anime-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.edit-btn,
-.delete-btn {
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  flex: 1;
-}
-
-.edit-btn {
-  background-color: #2196f3;
-}
-
-.edit-btn:hover {
-  background-color: #0b7dda;
-}
-
-.delete-btn {
-  background-color: #f44336;
-}
-
-.delete-btn:hover {
-  background-color: #d32f2f;
-}
-
-/* 模态框样式 */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 500px;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input,
-select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-  .tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .anime-list {
-    grid-template-columns: 1fr;
-  }
-
-  .controls {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-  .modal-content {
-    width: 95%;
-    margin: 5% auto;
-  }
+  font-size: 0.9rem;
+  color: #333;
 }
