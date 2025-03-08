@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动漫更新日历</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>动漫更新日历</h1>
+  </header>
+
+  <main>
+    <div class="controls">
+      <button id="add-anime-btn">添加新动漫</button>
+    </div>
+
+    <!-- 标签式导航 -->
+    <div class="tabs-container">
+      <div class="tabs">
+        <button class="tab-btn" data-day="1">周一</button>
+        <button class="tab-btn" data-day="2">周二</button>
+        <button class="tab-btn" data-day="3">周三</button>
+        <button class="tab-btn" data-day="4">周四</button>
+        <button class="tab-btn" data-day="5">周五</button>
+        <button class="tab-btn" data-day="6">周六</button>
+        <button class="tab-btn" data-day="0">周日</button>
+      </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content-container">
+      <div class="day-content" id="day-content">
+        <div class="anime-list" id="anime-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 添加/编辑动漫的模态框 -->
+  <div id="anime-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title">添加新动漫</h2>
+      <form id="anime-form">
+        <input type="hidden" id="anime-id">
+        <div class="form-group">
+          <label for="anime-name">动漫名称：</label>
+          <input type="text" id="anime-name" required>
+        </div>
+        <div class="form-group">
+          <label for="anime-day">更新日：</label>
+          <select id="anime-day" required>
+            <option value="1">周一</option>
+            <option value="2">周二</option>
+            <option value="3">周三</option>
+            <option value="4">周四</option>
+            <option value="5">周五</option>
+            <option value="6">周六</option>
+            <option value="0">周日</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="anime-platform">播放平台：</label>
+          <select id="anime-platform" required>
+            <option value="bilibili">哔哩哔哩</option>
+            <option value="tencent">腾讯视频</option>
+            <option value="youku">优酷视频</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="anime-episode">更新至：</label>
+          <input type="number" id="anime-episode" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="anime-image">图片URL：</label>
+          <input type="text" id="anime-image" required>
+        </div>
+        <div class="form-group">
+          <label for="anime-air-time">播放时间：</label>
+          <input type="time" id="anime-air-time" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="save-anime-btn">保存</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
